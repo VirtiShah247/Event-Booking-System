@@ -50,5 +50,13 @@ function doBooking(){
     localStorage.setItem("Events", JSON.stringify(eventsArray));
     localStorage.removeItem("bookEventId")
     localStorage.removeItem("noOfSeatsSelected")
-    window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/booking-history.html'
+    // window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/booking-history.html'
+    var currentPage = window.location.href;
+    let i = currentPage.indexOf("event-details.html?")
+    currentPage = currentPage.substring(0,i)+"booking-history.html";
+    // alert(currentPage);
+    // alert(window.location.href);
+
+    // window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/confirm-event.html'
+    window.location.href = currentPage;
 }
