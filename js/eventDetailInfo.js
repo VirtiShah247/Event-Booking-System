@@ -41,8 +41,14 @@ function doLogin(){
         alert("Tickets are not available!");
     }
     else{
-        // var currentPage = window.location.href;
-        window.location.href = 'confirm-event.html'
+        var currentPage = window.location.href;
+        let i = currentPage.indexOf("event-details.html?")
+        currentPage = currentPage.substring(0,i)+"confirm-event.html";
+        alert(currentPage);
+        // alert(window.location.href);
+
+        // window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/confirm-event.html'
+        window.location.href = currentPage;
         localStorage.setItem("bookEventId", eventId);
         localStorage.setItem("noOfSeatsSelected", parseInt(document.getElementById("seatSelect").value))
     }
