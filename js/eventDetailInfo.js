@@ -42,7 +42,7 @@ function doLogin(){
     }
     else{
         // var currentPage = window.location.href;
-        window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/confirm-event.html'
+        window.location.href = 'confirm-event.html'
         localStorage.setItem("bookEventId", eventId);
         localStorage.setItem("noOfSeatsSelected", parseInt(document.getElementById("seatSelect").value))
     }
