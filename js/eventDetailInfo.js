@@ -44,7 +44,7 @@ function doLogin(){
         var currentPage = window.location.href;
         let i = currentPage.indexOf("event-details.html?")
         currentPage = currentPage.substring(0,i)+"confirm-event.html";
-        alert(currentPage);
+        // alert(currentPage);
         // alert(window.location.href);
 
         // window.location.href = 'file:///D:/Virti%20Program/EBS/EBS/confirm-event.html'
